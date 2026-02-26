@@ -29,9 +29,9 @@ class ProfileAdapter(
         holder.binding.tvName.text = profile.name
         holder.binding.tvEmail.text = profile.email
 
-        holder.binding.btnEdit.setOnClickListener {
+        /*holder.binding.btnEdit.setOnClickListener {
             onEditClick(profile)
-        }
+        }*/
 
         holder.binding.btnDelete.setOnClickListener {
             onDeleteClick(profile)

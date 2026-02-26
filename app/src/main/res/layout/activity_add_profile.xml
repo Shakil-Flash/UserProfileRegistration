@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -9,35 +10,109 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:layout_gravity="center">
 
-            <EditText
-                android:id="@+id/etName"
-                android:hint="Name"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"/>
+                android:hint="Full Name"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/baseline_person_24"
+                app:endIconMode="clear_text"
+                app:helperText="Enter your full name">
 
-            <EditText
-                android:id="@+id/etEmail"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="12dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Email"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:endIconMode="clear_text"
+                app:helperText="Enter your email address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:hint="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="12dp"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"/>
-
-            <EditText
-                android:id="@+id/etPhone"
                 android:hint="Phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"/>
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/outline_contact_phone_24"
+                app:endIconMode="clear_text"
+                app:helperText="Enter your phone number">
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:hint="Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:padding="12dp"/>
 
-            <EditText
-                android:id="@+id/etAddress"
-                android:hint="Address"
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPostalAddress"/>
+                android:hint="Address"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/outline_add_location_24"
+                app:endIconMode="clear_text"
+                app:helperText="Enter your address">
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:hint="Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="1"
+                    android:padding="12dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btnSave"

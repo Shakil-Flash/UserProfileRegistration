@@ -1,5 +1,7 @@
 package com.flash.userprofileregistration.ui.singleprofile
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -29,6 +31,12 @@ class SingleProfileActivity : AppCompatActivity() {
             finish()
             return
         }
+        binding.tvPhone.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            val tvPhone = null
+            intent.data = Uri.parse("tel:${tvPhone?.writeText()}")
+            startActivity(intent)
+        }
 
         viewModel.getProfileById(profileId).observe(this) { profile ->
             profile?.let {
@@ -39,4 +47,8 @@ class SingleProfileActivity : AppCompatActivity() {
             }
         }
     }
+}
+
+private fun Nothing?.writeText(): String {
+    return TODO("Provide the return value")
 }
