@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.flash.userprofileregistration.R
 import com.flash.userprofileregistration.databinding.ActivityWelcomeBinding
+import com.flash.userprofileregistration.ui.profilelist.ProfileListActivity
 
 
 class WelcomeActivity : AppCompatActivity() {
